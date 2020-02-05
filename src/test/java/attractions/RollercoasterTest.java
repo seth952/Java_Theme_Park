@@ -14,7 +14,7 @@ public class RollercoasterTest {
 
     @Before
     public void setUp() {
-        rollerCoaster = new RollerCoaster("Blue Ridge", 10);
+        rollerCoaster = new RollerCoaster("Blue Ridge", 10, defaultPrice);
         visitor = new Visitor(19, 4.2,10.20);
     }
 
