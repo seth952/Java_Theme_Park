@@ -5,6 +5,8 @@ import org.junit.Test;
 import people.Visitor;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 
 public class TobaccoStallTest {
 
@@ -14,7 +16,7 @@ public class TobaccoStallTest {
     @Before
     public void setUp() throws Exception {
         tobaccoStall = new TobaccoStall("Jacks Drum", "Jack Jarvis", ParkingSpot.B1);
-        visitor = new Visitor(14, 4.2,10.20);
+        visitor = new Visitor(19, 4.2,10.20);
     }
 
     @Test
@@ -33,8 +35,8 @@ public class TobaccoStallTest {
 
     }
     @Test
-    public void getAge(){
+    public void visitorAllowedOver18(){
 
-        assertEquals(false, tobaccoStall.isAllowedTo(Visitor visitor));
+        assertTrue(tobaccoStall.isAllowedTo(visitor));
     }
 }

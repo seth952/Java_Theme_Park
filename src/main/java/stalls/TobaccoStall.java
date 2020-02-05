@@ -2,6 +2,7 @@ package stalls;
 
 import behaviours.IReviewed;
 import behaviours.ISecurity;
+import people.Visitor;
 
 
 public class TobaccoStall extends Stall implements ISecurity, IReviewed {
@@ -12,13 +13,14 @@ public class TobaccoStall extends Stall implements ISecurity, IReviewed {
 
     @Override
     public boolean isAllowedTo(Visitor visitor) {
-        if (visitor.getAge() > 17)
-        return true;
-        else return false;
+        return (visitor.getAge() > 17);
+
     }
 
     @Override
     public int getRating() {
         return 0;
     }
+
+
 }
